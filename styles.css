@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Protest+Guerrilla&display=swap');
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -10,8 +14,13 @@ body, html {
     margin-bottom: 10px;
 }
 
+h2 {
+    font-family: Protest Guerrilla;
+}
+
 .header-canvas {
     margin-right: 10px;
+    background-color: chartreuse;
 }
 
 .box-header h2 {
@@ -46,7 +55,7 @@ canvas {
     margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ccc;
-    background-color: #9b59b6; /* Bright purple */
+    background-color: rgb(89, 154, 182)182, 89); /* Bright purple */
     border-radius: 10px; /* Rounded border */
 }
 
@@ -58,6 +67,7 @@ canvas {
     border-radius: 30px; /* Round button */
     text-decoration: none;
     transition: background-color 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .access-button:hover {
@@ -66,6 +76,7 @@ canvas {
 
 .box p {
     margin: 0;
+    font-family: Open Sans;
 }
 
 .fade-in {
