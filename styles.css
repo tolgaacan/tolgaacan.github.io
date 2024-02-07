@@ -1,0 +1,91 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header-canvas {
+    margin-right: 10px;
+}
+
+.box-header h2 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+canvas {
+    background-color: #f0f0f0; /* Fallback color */
+    background-image: url('path/to/your/image.jpg'); /* Your image */
+    background-size: cover;
+    width: 50%;
+}
+
+.content {
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(50px); /* Initial position off-screen to the right */
+    animation: fade-in 1s ease-in-out forwards, move-in 1s ease-in-out forwards;
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #9b59b6; /* Bright purple */
+    border-radius: 10px; /* Rounded border */
+}
+
+.access-button {
+    display: inline-block;
+    background-color: #ff0000; /* Red color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px; /* Round button */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.access-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+.box p {
+    margin: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes move-in {
+    from {
+        transform: translateX(50px); /* Initial position off-screen to the right */
+    }
+    to {
+        transform: translateX(0); /* Move to the original position */
+    }
+}

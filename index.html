@@ -3,35 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Tolga's Portfolio</title>
+    <title>Portfolio Intro Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <h1>Tolga Acan</h1>
-        <p>Welcome to my portfolio</p>
-    </header>
-
-    <section class="content-creator">
-        <h2>Content Creator</h2>
-        <p>
-            As a content creator, I specialize in crafting engaging and compelling digital content. 
-            From captivating videos to informative blog posts, I strive to deliver content that resonates 
-            with the audience and leaves a lasting impression.
-        </p>
-        <button><a href="https://popqutmedia.github.io">Find Out More</button></a>
-    </section>
-
-    <section class="educator">
-        <h2>Educator</h2>
-        <p>
-            As an educator, I am passionate about sharing knowledge and fostering learning experiences. 
-            Through interactive workshops, courses, and educational materials, I aim to empower others 
-            with the skills and insights needed to succeed in their respective fields.
-        </p>
-        <button><a href="https://blockchainuniversityedu.github.io">Find Out More</button></a>
-    </section>
-
+    <div class="container">
+        <canvas id="canvas" width="300" height="400"></canvas>
+        <div class="content">
+            <div id="box1" class="box">
+                <div class="box-header">
+                    <canvas class="header-canvas" width="50" height="20"></canvas>
+                    <h2>CONTENT CREATOR</h2>
+                </div>
+                <p>
+                    For the future my goal is to build a consulting agency focused on
+                    <br>
+                    helping content creators in relating creative industries, repurpose
+                    <br>
+                    and grow their brand to attract bigger audiences. If you're interested,
+                    <br>
+                    please find out more about what I'm doing through the button below.
+                </p>
+                <a href="#" class="access-button">ACCESS</a>
+            </div>
+            <div id="box2" class="box">
+                <div class="box-header">
+                    <canvas class="header-canvas" width="50" height="20"></canvas>
+                    <h2>EDUCATOR</h2>
+                </div>
+                <p>
+                    Technology is constantly expanding and progressing at a high rate
+                    <br>
+                    from across the world, hence why my focus is to educate both present
+                    <br>
+                    and future generations about the technological processes behind blockchain
+                    <br>
+                    technology, the next phase of the internet as we know it today. If you'd
+                    <br>
+                    like to find out more about my project, please do so throught the button
+                    <br>
+                    below.
+                </p>
+                <a href="#" class="access-button">ACCESS</a>
+            </div>
+            <div id="box3" class="box">
+                <div class="box-header">
+                    <canvas class="header-canvas" width="50" height="20"></canvas>
+                    <h2>PERSONAL WORK</h2>
+                </div>
+                <p>
+                    As career experiences outside of business-related activities are
+                    <br>
+                    essential towards skill-building initiatives, I have participated
+                    <br>
+                    in various student groups and worked at early-stage startups which
+                    <br>
+                    were focused on educating and fostering commmunities in need of 
+                    <br>
+                    guidance relating to their corresponding fields of knowledge.
+                    <br>
+                    If you'd like to find out more about my past experiences, please
+                    <br>
+                    click the button below.
+                </p>
+                <a href="#" class="access-button">ACCESS</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

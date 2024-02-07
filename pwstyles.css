@@ -1,0 +1,100 @@
+body {
+    line-height: 1.5;
+    font-family: sans-serif;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    background-color: black;
+ }
+ 
+ h1 {
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    position: relative;
+    color: antiquewhite;
+ }
+ 
+ h3 {
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+    margin-left:10rem;
+    display: inline-block;
+    position: relative;
+    color: rgb(255, 255, 255);
+ }
+
+ h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease-in;
+ }
+  
+ h1.underline::after {
+    transform: scaleX(1);
+ }
+ 
+ p,
+ li {
+ 
+    animation: fade linear both; 
+    animation-timeline: view(); 
+    animation-range: entry 50% cover 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    color: white;
+ }
+ 
+ h2 {
+    background: linear-gradient(90deg, rgb(255, 255, 255), transparent);
+    background-size: 200%;
+    animation: reveal both linear;
+    animation-timeline: view();
+    background-repeat: no-repeat;
+    animation-range: entry 50% cover 50%;
+    background-clip: text;
+    -webkit-backdrop-clip: text;
+    color: transparent;
+    margin-left:10rem;
+ }
+
+ p {
+    background: linear-gradient(90deg, rgb(255, 255, 255), transparent);
+    background-size: 200%;
+    animation: reveal both linear;
+    animation-timeline: view();
+    background-repeat: no-repeat;
+    animation-range: entry 10% cover 10%;
+    background-clip: text;
+    -webkit-backdrop-clip: text;
+    color: transparent;
+    margin-left:10rem;
+ }
+ 
+ @keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    0% {
+        opacity: 0;
+    }   
+ }
+ 
+ @keyframes reveal {
+    from {
+        background-position-x: 200%;
+    }
+    to {
+        background-position-x: 0%;
+    }
+ }
+ 
