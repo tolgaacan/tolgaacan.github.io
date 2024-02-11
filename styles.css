@@ -34,7 +34,7 @@ h2 {
 
 canvas {
     background-color: #f0f0f0; /* Fallback color */
-    background-image: url('Background\ Image.jpg'); /* Your image */
+    background-image: url('Profile.png'); /* Your image */
     background-size: cover;
     width: 50%;
 }
