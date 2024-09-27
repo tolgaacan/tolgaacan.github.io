@@ -7,68 +7,209 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <canvas id="canvas" width="300" height="400"></canvas>
-        <div class="content">
-            <div id="box1" class="box">
-                <div class="box-header">
-                    <h2>CONTENT CREATOR</h2>
-                </div>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+        }
+
+        /* Centered Text for 'tolga's portfolio' */
+        .header {
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+            font-size: 72px;
+            font-weight: bold;
+            text-transform: lowercase;
+            margin: 0;
+            padding: 40px 0;
+            opacity: 0; /* Start invisible */
+            animation: fadeIn 3s ease-in-out forwards; /* Apply fade-in animation */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh; /* Adjust height to center it vertically */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Fade to visible */
+            }
+        }
+
+        /* Two-column layout for the content */
+        .content-wrapper {
+            display: flex;
+            width: 100%;
+            height: 80vh; /* Height for the content section */
+        }
+
+        /* Left image container */
+        .image-container {
+        width: 100%; /* Ensure the container takes full width */
+        height: 900px; /* Ensure the container takes full height */
+        overflow: hidden; /* Hide any overflow from the image */
+        display: flex; /* Use flexbox for centering */
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+        background-color: #f700ff; /* Optional: Background color for the container */
+        padding-right: 300px;
+    }
+
+    .image-container img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the entire area without distortion */
+    }
+
+        /* Right container for the stacked columns */
+        .content-section {
+            flex: 1; /* Takes half of the width */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly; /* Ensures even spacing between columns */
+            align-items: center;
+            padding-left: 20px; /* Space between image and columns */
+        }
+
+        /* Each column occupies 1/3 of the height and slides in color on hover */
+        .column {
+            background-color: #1a1a1a;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 95%;
+            height: 30%; /* Each column takes up 30% of the content section */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Common styles for slide-in effect */
+        .column::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: left 0.5s ease;
+            z-index: 1;
+        }
+
+        .column:hover::before {
+            left: 0;
+        }
+
+        /* Individual colors for each section's slide-in */
+        #content-creator::before {
+            background-color: rgba(0, 123, 255, 0.8); /* Blue */
+        }
+
+        #educator::before {
+            background-color: rgba(255, 165, 0, 0.8); /* Orange */
+        }
+
+        #personal-work::before {
+            background-color: rgba(255, 0, 0, 0.8); /* Red */
+        }
+
+        /* Style for access button (hidden initially) */
+        .access-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff; /* White background */
+            color: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2; /* Bring it above the sliding square */
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+            /* Show the access button on hover */
+        .column:hover .access-button {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+            /* Ensure button stays white on hover */
+        .access-button:hover {
+            background-color: #fff; /* Keep background white */
+            color: #000; /* Keep text color black */
+        }   
+
+        p {
+            line-height: 1.6;
+            position: relative;
+            z-index: 2; /* Ensure the text is above the sliding square */
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 22px;
+            position: relative;
+            z-index: 2;
+        }
+        
+    </style>
+    
+    <div class="header">
+        <h1>tolga's portfolio</h1>
+    </div>
+
+    <div class="content-wrapper">
+        <!-- Left Image Column -->
+        <div class="image-container">
+            <img src="Profile.png" alt="">
+        </div>
+
+        <!-- Right Section for Stacked Columns -->
+        <section class="right-section">
+            <div class="column" id="content-creator">
+                <h2>CONTENT CREATOR</h2>
                 <p>
                     For the future my goal is to build a consulting agency focused on
-                    <br>
                     helping content creators in relating creative industries, repurpose
-                    <br>
                     and grow their brand to attract bigger audiences. If you're interested,
-                    <br>
                     please find out more about what I'm doing through the button below.
                 </p>
-                <br><br><br>
                 <a href="https://popqutmedia.github.io" class="access-button">ACCESS</a>
             </div>
-            <div id="box2" class="box">
-                <div class="box-header">
-                    <h2>EDUCATOR</h2>
-                </div>
+
+            <div class="column" id="educator">
+                <h2>EDUCATOR</h2>
                 <p>
                     Technology is constantly expanding and progressing at a high rate
-                    <br>
                     from across the world, hence why my focus is to educate both present
-                    <br>
                     and future generations about the technological processes behind blockchain
-                    <br>
                     technology, the next phase of the internet as we know it today. If you'd
-                    <br>
-                    like to find out more about my project, please do so throught the button
-                    <br>
+                    like to find out more about my project, please do so through the button
                     below.
                 </p>
-                <br><br><br>
-                <a href="https://blockchainuniversityedu.github.io" class="access-button">ACCESS</a>
+                <a href="badsci.github.io" class="access-button">ACCESS</a>
             </div>
-            <div id="box3" class="box">
-                <div class="box-header">
-                    <h2>PERSONAL WORK</h2>
-                </div>
+
+            <div class="column" id="personal-work">
+                <h2>PERSONAL WORK</h2>
                 <p>
                     As career experiences outside of business-related activities are
-                    <br>
                     essential towards skill-building initiatives, I have participated
-                    <br>
                     in various student groups and worked at early-stage startups which
-                    <br>
-                    were focused on educating and fostering commmunities in need of 
-                    <br>
+                    were focused on educating and fostering communities in need of 
                     guidance relating to their corresponding fields of knowledge.
-                    <br>
                     If you'd like to find out more about my past experiences, please
-                    <br>
                     click the button below.
                 </p>
                 <a href="personalworkpage.html" class="access-button">ACCESS</a>
             </div>
-        </div>
+        </section>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
