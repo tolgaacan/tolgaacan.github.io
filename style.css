@@ -1,0 +1,110 @@
+.helvetica { font-family: Helvetica; }
+
+body {
+    background-color: #ff0267;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20%;
+    }
+
+h1 {
+    color: white;
+    font-size: 250px;
+}
+
+ol {
+    color: white;
+    font-size: 85px;
+    text-align: center;
+    list-style-type: none
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+}
+
+
+p {
+    color: white;
+    font-size: 20px;
+    padding-left: 755px;
+    text-align: left;
+    display: flex;
+}
+
+
+.box {
+    width: 125px;
+    height: -12px;
+    border: 1px solid rgb(255, 255, 255);
+    padding-left: 1px;
+    margin: 10px;
+    background-color: black;
+}
+
+.box2 {
+    width: 265px;
+    height: -12px;
+    border: 1px solid rgb(255, 255, 255);
+    padding-left: 1px;
+    margin: 10px;
+    background-color: black;
+}
+
+.box3 {
+    width: 315px;
+    height: -12px;
+    border: 1px solid rgb(255, 255, 255);
+    padding-left: 1px;
+    margin: 10px;
+    background-color: black;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .button1 {background-color: #2bff00;}
+  .button2 {background-color: #ffd900;}
+  .button3 {background-color: #00ffff;}
+  
+  #mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 150px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  #mySidenav a:hover {
+    left: 0;
+  }
+  
+  #about {
+    top: 700px;
+    background-color: #000000;
+  }
+  
+  #bonus {
+    top: 600px;
+    background-color: #000000;
+  }
+
+  #video {
+    top: 500px;
+    background-color: #000000;
+  }
+
+  
